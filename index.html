@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1157/1157109.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 id="app-title">Minhas Notas</h1>
+    <div id="lang-switcher">
+      <span>Idioma:</span>
+      <button onclick="setLanguage('pt')">🇧🇷 Português</button>
+      <button onclick="setLanguage('en')">🇺🇸 English</button>
+    </div>
+    <button id="toggle-theme">🌙</button>
+  </header>
+
+  <main>
+    <section id="editor">
+      <input type="text" id="note-title" placeholder="Título da nota" />
+      <textarea id="note-content" placeholder="Escreva em Markdown..."></textarea>
+      <div id="preview"></div>
+      <button id="save-note">Salvar Nota</button>
+      <p id="feedback" class="hidden">Nota salva com sucesso!</p>
+    </section>
+
+    <section id="notes-list">
+      <h2>Suas Notas</h2>
+      <ul id="notes-ul"></ul>
+    </section>
+  </main>
+
+  <script src="lang.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #121212;
+    --text-light: #1e1e1e;
+    --text-dark: #f0f0f0;
+    --primary: #ecafaf;
+    --accent: #f5bdce;
+    --card-bg-light: #fff0f6;
+    --card-bg-dark: #1f1f1f;
+    --radius: 14px;
+    --font: 'Poppins', sans-serif;
+  }
+  
+  [data-theme="light"] {
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+    --card-bg: var(--card-bg-light);
+  }
+  
+  [data-theme="dark"] {
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
+    --card-bg: var(--card-bg-dark);
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    transition: all 0.3s ease;
+  }
+  
+  header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  #lang-switcher button {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  #editor {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-family: var(--font);
+    font-size: 1rem;
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--accent);
+  }
+  
+  #preview {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid #eee;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  #feedback {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #notes-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .note-item {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .note-item span {
+    flex: 1;
+  }
+  
+  .note-actions button {
+    margin-left: 0.5rem;
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+  
+  .note-actions button:hover {
+    background: var(--primary);
+    color: white;
+  }
+  
